@@ -11,7 +11,7 @@ class Display extends \Magento\Framework\View\Element\Template
 		$this->_postFactory = $postFactory;
 		parent::__construct($context);
 	}
-
+ 
 	public function sayHello()
 	{
 		return __('Hola mundo , Vacunas ');
