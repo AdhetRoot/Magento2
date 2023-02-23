@@ -16,7 +16,7 @@ class Display extends \Magento\Framework\View\Element\Template
 	{
 		return __('Hola mundo , Vacunas ');
 	}
-
+       
 	public function getPostCollection(){
 		$post = $this->_postFactory->create();
 		return $post->getCollection();

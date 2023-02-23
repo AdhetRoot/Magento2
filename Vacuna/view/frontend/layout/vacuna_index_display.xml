@@ -3,4 +3,4 @@
     <referenceContainer name="content">
         <block class="Farmacia\Vacuna\Block\Display" name="vacuna_display" template="Farmacia_Vacuna::sayhello.phtml" />
     </referenceContainer>
-</page>
+</page> 
