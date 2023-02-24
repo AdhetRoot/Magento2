@@ -1,0 +1,63 @@
+
+<?php
+
+/**
+ * @var \Farmacia\Vacuna\Block\Step1 $block
+ */
+
+/*echo $block->sayHello();
+*/
+?>
+<html>
+<body>
+
+<form class="form create account form-create-account" method="post" id="form-validate"  autocomplete="off"  action="" data-mage-init='{"validation": {}}'>
+    <fieldset class="fieldset create info">
+        <legend class="legend"><span>Datos de la cita</span></legend><br>
+
+            <div class="field field-name-location required">
+                <label class="label" for="location"><span>Comparte tu dirección</span></label>
+                <div class="control">
+                    <input type="text" id="location" name="location" value="" title="Dirección" class="input-text required-entry letters-only" data-validate="{required:true}" autocomplete="off" aria-required="true">
+                </div>
+            </div>
+            <div class="field field-name-consultorio required">
+                <label class="label" for="consultorio"><span>Consultorio</span></label>
+                <div class="control">
+                    <select id="consultorio" name="consultorio">
+                        <option value="1">Miguel Hidalgo</option>
+                        <option value="2">Azcapotzalco</option>
+                        <option value="2">Guerrero</option>
+                    </select>
+                </div>
+            </div>
+            <div class="field field-name-dia required">
+                <label class="label" for="dia"><span>Día</span></label>
+                <div class="control">
+                    <!-- <input type="text" id="dia" name="dia" value="" title="Día" class="input-text" data-validate="{required:true}" autocomplete="off" aria-required="true"> -->
+                    <input type='date' name='dia' >
+
+                </div>
+            </div>
+            
+            <div class="field field-name-hora required">
+                <label class="label" for="hora"><span>Hora</span></label>
+                <div class="control">
+                    <input type="time" id="hora" name="hora" value="" title="Hora" class="input-text" data-validate="{required:true}" autocomplete="off" aria-required="true">
+                </div>
+            </div>
+            
+    </fieldset>
+          
+
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action submit primary" title="Next">
+                <span>Siguiente</span>
+            </button>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

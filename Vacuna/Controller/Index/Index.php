@@ -9,8 +9,7 @@ class Index extends \Magento\Framework\App\Action\Action
   
 	public function __construct(
 		\Magento\Framework\App\Action\Context $context,
-		\Magento\Framework\View\Result\PageFactory $pageFactory,
-		\Tresd\HelloWorld\Model\PostFactory $postFactory
+		\Magento\Framework\View\Result\PageFactory $pageFactory
 		)
 	{
 		$this->_pageFactory = $pageFactory;
