@@ -2,18 +2,19 @@
 <?php
 
 /**
- * @var \Farmacia\Vacuna\Block\Step1 $block
+ * @var \Farmacia\Vacuna\Block\Step2 $block
  */
 
 /*echo $block->sayHello();
 */
+
 ?>
 <html>
 <body>
 
-<form class="form create account form-create-account" id="vacuna_form_data" method="post" action="<?php echo $block->getUrl('vacuna/index/step2'); ?>" >
+<form class="form create account form-create-account" id="vacuna-form" method="post" action="<?php echo $block->getUrl('vacuna/index/step1'); ?>" data-mage-init='{"validation": {}}'>
     <fieldset class="fieldset create info">
-        <legend class="legend"><span>Datos de la cita</span></legend><br>
+        <legend class="legend"><span>Datos de la cita STEP2</span></legend><br>
 
             <div class="field field-name-location required">
                 <label class="label" for="direccion"><span>Comparte tu dirección</span></label>
@@ -35,7 +36,7 @@
                 <label class="label" for="dia"><span>Día</span></label>
                 <div class="control">
                     <!-- <input type="text" id="dia" name="dia" value="" title="Día" class="input-text" data-validate="{required:true}" autocomplete="off" aria-required="true"> -->
-                    <input type='date' id="dia" name='dia' >
+                    <input type='date' name='dia' >
 
                 </div>
             </div>
@@ -47,12 +48,6 @@
                 </div>
             </div>
             
-            <div class="field field-name-email required">
-                <label class="label" for="email"><span>Correo</span></label>
-                <div class="control">
-                    <input type="email" id="email" name="email" value="" title="email" class="input-text required-entry " data-validate="{required:true}" autocomplete="off" aria-required="true">
-                </div>
-            </div>
     </fieldset>
           
 
