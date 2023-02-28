@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @var \Farmacia\Vacuna\Block\Step3 $block
+ */
+
+
+
+
+?>
+<html>
+<body>
+
+<H1>STEP3<H1>
+<H1><?= $block->escapeHtml($block->generateFolio()) ?><H1>
+
+<p>Los datos que ingresaste en el paso 1 son:</p>
+<ul>
+    <li>Dirección: <?= $block->escapeHtml($block->getFormData()['direccion']) ?></li>
+    <li>Consultorio: <?= $block->escapeHtml($block->getFormData()['consultorio']) ?></li>
+    <li>Día: <?= $block->escapeHtml($block->getFormData()['dia']) ?></li>
+    <li>Hora: <?= $block->escapeHtml($block->getFormData()['hora']) ?></li>
+    <li>Email: <?= $block->escapeHtml($block->getFormData()['email']) ?></li>
+</ul>
+
+<p>Los datos que ingresaste en el el paso 2 son : </p>
+<ul>
+<li>Curp: <?= $block->escapeHtml($block->getFormData2()['curp']) ?></li>
+    <li>Nombres: <?= $block->escapeHtml($block->getFormData2()['nombres']) ?></li>
+    <li>Apellido Paterno: <?= $block->escapeHtml($block->getFormData2()['apellido_paterno']) ?></li>
+    <li>Apellido Materno: <?= $block->escapeHtml($block->getFormData2()['apellido_materno']) ?></li>
+    <li>Municipio: <?= $block->escapeHtml($block->getFormData2()['municipio']) ?></li>
+</ul>
+<html>
+<body>

@@ -31,25 +31,44 @@ class Step2 extends Action
             $this->_redirect('customer/account/login');
             return;
         }
-
-   
+        try {
             $data = $this->getRequest()->getPost();
-             //var_dump($data);die("datatatta");
+        
             // Verify that form field names match with the names in the controller
             if (!empty($data['direccion']) && !empty($data['consultorio']) && !empty($data['dia']) && !empty($data['hora']) && !empty($data['email'])) {
                 $this->customerSession->setData('vacuna_form_data', $data);
-               // var_dump($this->customerSession->getData('vacuna_form_data'));die("entro a if"); 
-                //$this->_redirect('vacuna/index/step2');
                 $resultPage = $this->pageFactory->create();
                 $resultPage->getConfig()->getTitle()->prepend(__('Vacuna Step 2'));
-                 return $resultPage;
-
+                return $resultPage;
             } else {
-                // If the field names don't match, display an error message or redirect back to the form page
-                $this->messageManager->addErrorMessage(__('Revisa los datos de tu formulario'));
-                $this->_redirect('vacuna/index/step1');
-                return;
+                // If the field names don't match, throw an exception with an error message
+                throw new \Exception('Revisa los datos de tu formulario');
             }
+        } catch (\Exception $e) {
+            // Catch the exception and display the error message to the user
+            $this->messageManager->addErrorMessage($e->getMessage());
+            $this->_redirect('vacuna/index/step1');
+            return;
+        }
+        
+   
+          //  $data = $this->getRequest()->getPost();
+             //var_dump($data);die("datatatta");
+            // Verify that form field names match with the names in the controller
+            //if (!empty($data['direccion']) && !empty($data['consultorio']) && !empty($data['dia']) && !empty($data['hora']) && !empty($data['email'])) {
+              //  $this->customerSession->setData('vacuna_form_data', $data);
+               // var_dump($this->customerSession->getData('vacuna_form_data'));die("entro a if"); 
+                //$this->_redirect('vacuna/index/step2');
+                //$resultPage = $this->pageFactory->create();
+                //$resultPage->getConfig()->getTitle()->prepend(__('Vacuna Step 2'));
+                // return $resultPage;
+
+            //} else {
+                // If the field names don't match, display an error message or redirect back to the form page
+               // $this->messageManager->addErrorMessage(__('Revisa los datos de tu formulario'));
+                //$this->_redirect('vacuna/index/step1');
+                //return;
+           // }
 
         
     
