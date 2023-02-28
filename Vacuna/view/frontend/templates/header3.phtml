@@ -1,0 +1,49 @@
+
+<?php
+
+/**
+ * @var \Farmacia\Vacuna\Block\Header3 $block
+ */
+
+echo $block->sayHello();
+
+?>
+<head>
+<style>
+.step-indicator {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-indicator li {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-indicator li span {
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+.step-indicator li.current-step {
+  background-color: #0077c2;
+}
+.step-indicator li.current-step span {
+  color: #fff;
+}
+</style>
+
+</head>
+<ol class="step-indicator">
+  <li><span>1</span></li>
+  <li ><span>2</span></li>
+  <li  class="current-step"><span>3</span></li>
+</ol>

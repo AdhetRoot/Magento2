@@ -1,0 +1,142 @@
+
+<?php
+
+/**
+ * @var \Farmacia\Vacuna\Block\Step2 $block
+ */
+
+/*echo $block->sayHello();
+*/
+
+?>
+<html>
+<body>
+
+<form class="form create account form-create-account" id="vacuna_form_data_2" method="post" action="<?php echo $block->getUrl('vacuna/index/step3'); ?>" data-mage-init='{"validation": {}}'>
+    <fieldset class="fieldset create info">
+        <legend class="legend"><span>Datos personales</span></legend><br>
+
+        <div class="field field-name-curp required">
+            <label class="label" for="curp"><span>CURP</span></label>
+            <div class="control">
+                <input type="text" id="curp" name="curp" value="" title="CURP" class="input-text required-entry" data-validate="{required:true}" autocomplete="off" aria-required="true">
+            </div>
+        </div>
+
+        <div class="field field-name-nombres required">
+            <label class="label" for="nombres"><span>Nombres</span></label>
+            <div class="control">
+                <input type="text" id="nombres" name="nombres" value="" title="Nombres" class="input-text required-entry letters-only" data-validate="{required:true}" autocomplete="off" aria-required="true">
+            </div>
+        </div>
+
+        <div class="field field-name-apellido-paterno required">
+            <label class="label" for="apellido-paterno"><span>Apellido Paterno</span></label>
+            <div class="control">
+                <input type="text" id="apellido-paterno" name="apellido_paterno" value="" title="Apellido Paterno" class="input-text required-entry letters-only" data-validate="{required:true}" autocomplete="off" aria-required="true">
+            </div>
+        </div>
+
+        <div class="field field-name-apellido-materno required">
+            <label class="label" for="apellido-materno"><span>Apellido Materno</span></label>
+            <div class="control">
+                <input type="text" id="apellido-materno" name="apellido_materno" value="" title="Apellido Materno" class="input-text required-entry letters-only" data-validate="{required:true}" autocomplete="off" aria-required="true">
+            </div>
+        </div>
+
+        <div class="field field-name-fecha-nacimiento required">
+            <label class="label" for="fecha-nacimiento"><span>Fecha de nacimiento</span></label>
+            <div class="control">
+                <input type="date" id="fecha-nacimiento" name="fecha_nacimiento" value="" title="Fecha de nacimiento" class="input-text required-entry" data-validate="{required:true}" autocomplete="off" aria-required="true">
+            </div>
+        </div>
+
+        <div class="field field-name-telefono required">
+            <label class="label" for="telefono"><span>Teléfono</span></label>
+            <div class="control">
+                <input type="text" id="telefono" name="telefono" value="" title="Teléfono" class="input-text required-entry" data-validate="{required:true}" autocomplete="off" aria-required="true">
+            </div>
+        </div>
+
+        <div class="field field-name-genero required">
+    <label class="label" for="genero"><span>Género</span></label>
+    <div class="control">
+        <select id="genero" name="genero">
+            <option value="">Seleccione una opción</option>
+            <option value="F">Femenino</option>
+            <option value="M">Masculino</option>
+            <option value="O">Otro</option>
+        </select>
+    </div>
+</div>
+<div class="field field-name-ubicacion required">
+    <label class="label" for="ubicacion"><span>Mi ubicación</span></label>
+    <div class="control">
+        <input type="text" id="ubicacion" name="ubicacion" value="" title="Mi ubicación" class="input-text required-entry" data-validate="{required:true}" autocomplete="off" aria-required="true">
+    </div>
+</div>
+
+<div class="field field-name-codigo-postal required">
+    <label class="label" for="codigo-postal"><span>Código postal</span></label>
+    <div class="control">
+        <input type="text" id="codigo-postal" name="codigo_postal" value="" title="Código postal" class="input-text required-entry" data-validate="{required:true}" autocomplete="off" aria-required="true">
+    </div>
+</div>
+
+<div class="field field-name-numero-exterior required">
+    <label class="label" for="numero-exterior"><span>Número exterior</span></label>
+    <div class="control">
+        <input type="text" id="numero-exterior" name="numero_exterior" value="" title="Número exterior" class="input-text required-entry" data-validate="{required:true}" autocomplete="off" aria-required="true">
+    </div>
+</div>
+
+<div class="field field-name-colonia required">
+    <label class="label" for="colonia"><span>Colonia</span></label>
+    <div class="control">
+        <input type="text" id="colonia" name="colonia" value="" title="Colonia" class="input-text required-entry" data-validate="{required:true}" autocomplete="off" aria-required="true">
+    </div>
+</div>
+
+<div class="field field-name-estado required">
+    <label class="label" for="estado"><span>Estado</span></label>
+    <div class="control">
+        <input type="text" id="estado" name="estado" value="" title="Estado" class="input-text required-entry" data-validate="{required:true}" autocomplete="off" aria-required="true">
+    </div>
+</div>
+
+<div class="field field-name-municipio required">
+    <label class="label" for="municipio"><span>Municipio</span></label>
+    <div class="control">
+        <input type="text" id="municipio" name="municipio" value="" title="Municipio" class="input-text required-entry" data-validate="{required:true}" autocomplete="off" aria-required="true">
+    </div>
+</div>
+
+<div class="field field-name-numero-interior">
+    <label class="label" for="numero-interior"><span>Número interior</span></label>
+    <div class="control">
+        <input type="text" id="numero-interior" name="numero_interior" value="" data-validate="{required:true}" title="Número interior" class="input-text" autocomplete="off">
+    </div>
+</div>
+
+<div class="field field-name-calle required">
+    <label class="label" for="calle"><span>Calle</span></label>
+    <div class="control">
+        <input type="text" id="calle" name="calle" value="" title="Calle" class="input-text required-entry" data-validate="{required:true}" autocomplete="off" aria-required="true">
+    </div>
+</div>
+<div class="actions-toolbar">
+    <div class="primary">
+        <button type="submit" title="Siguiente" class="action submit primary">
+            <span>Siguiente</span>
+        </button>
+    </div>
+    <div class="secondary">
+        <button type="submit" title="Regresar" class="action submit secondary" onclick="window.location.href='<?php echo $block->getUrl('vacuna/index/step1'); ?>'">
+            <span>Regresar</span>
+        </button>
+    </div>
+</div>
+</form>
+
+</body>
+</html>
